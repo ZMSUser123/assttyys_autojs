@@ -46,6 +46,7 @@ export class Script {
 	job: Job;
 	schedule: typeof schedule;
 	ncnnBgyx = ncnnBgyx;
+	isPause: boolean;
 
 	/**
 	 * 运行次数，下标为funcList中的id，值为这个func成功执行的次数；
@@ -535,7 +536,6 @@ export class Script {
 	 */
 	_run(job?: Job): void {
 		if (this.runThread) return;
-		this.job = job;
 		const self = this;
 		try {
 			this.initFuncList();
@@ -543,7 +543,16 @@ export class Script {
 			this.runDate = new Date();
 			this.currentDate = new Date();
 			this.runTimes = {};
-			this.global = merge({}, globalRoot);
+			if (this.isPause) {
+				myToast(`继续方案[${this.scheme.schemeName}]`);
+			} else {
+				myToast(`运行方案[${this.scheme.schemeName}]`);
+			}
+			if (!this.isPause) {
+				this.global = merge({}, globalRoot);
+				this.job = job;
+			}
+			this.isPause = false;
 			if (null === this.scheme) {
 				if (typeof self.stopCallback === 'function') {
 					self.stopCallback();
@@ -568,10 +577,8 @@ export class Script {
 		// img.saveTo('/sdcard/testimg.png');
 		// img.recycle();
 		// test end
-		myToast(`运行方案[${this.scheme.schemeName}]`);
 		this.schemeHistory.push(this.scheme);
-		// console.log(`运行方案[${this.scheme.schemeName}]`);
-		this.runThread = threads.start(function () {
+		globalThis.runThread = threads.start(function () {
 			try {
 				// eslint-disable-next-line no-constant-condition
 				while (true) {
@@ -664,19 +671,22 @@ export class Script {
 	 * 停止脚本，内部接口
 	 */
 	_stop(flag?: boolean) {
-		if (null !== this.runThread) {
+		if (null !== globalThis.runThread) {
 			if (typeof this.stopCallback === 'function') {
 				this.stopCallback();
 			}
 			if (!flag) {
 				this.schemeHistory = [];
 			}
-			if (!flag && this.job) {
+			log(this.isPause)
+			console.log('job:' + this.job?.name);
+			if (!flag && this.job && !this.isPause) {
 				this.job.doDone();
 			}
-			this.runThread.interrupt();
+			log(this.isPause)
+			globalThis.runThread && globalThis.runThread.interrupt();
 		}
-		this.runThread = null;
+		globalThis.runThread = null;
 	}
 
 	/**
@@ -721,6 +731,11 @@ export class Script {
 		}, 510);
 	}
 
+	// 暂停
+	pause() {
+		this.isPause = true;
+		this.stop();
+	}
 	/**
 	 * 关键函数，操作函数
 	 * 针对func进行多点比色，成功的话按顺序点击oper数组

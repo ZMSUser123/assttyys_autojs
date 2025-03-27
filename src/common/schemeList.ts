@@ -516,13 +516,11 @@ const SchemeList: IScheme[] = [
 	},
 	{
 		id: 48,
-		groupNames: ['御魂奉纳'],
 		schemeName: '奉纳御魂_开始奉纳',
 		list: [0, 2, 302],
 	},
 	{
 		id: 49,
-		groupNames: ['绘卷进度检测'],
 		schemeName: '绘卷进度_检测并提醒',
 		list: [0, 304],
 		star: true,
@@ -882,17 +880,20 @@ const SchemeList: IScheme[] = [
 			}
 		}
 	}, {
+		// [{"schemeName":"123","star":true,"list":[3,500,505,516],"groupNames":["未分组"],"config":{"500":{"a_ctivity_gateOfHades":true,"a_ctivity_dojo":true,"a_ctivity_hunt":true,"a_ctivity_narrow":true,"a_ctivity_banquet":true,"a_ctivity_huntBoss":true}}}]
 		id: 102,
-		schemeName: '超鬼王_刷票',
-		list: [50, 0, 1, 2, 3, 402],
+		schemeName: '进入寮活动New',
+		list: [3, 500, 505, 516],
 		config: {
-			'50': { buff_type: '御魂', ready_once_buff: true }
+			'500': {
+				a_ctivity_gateOfHades: true,
+				a_ctivity_dojo: true,
+				a_ctivity_hunt: true,
+				a_ctivity_narrow: true,
+				a_ctivity_banquet: true,
+				a_ctivity_huntBoss: true,
+			}
 		}
-	}
-	, {
-		id: 103,
-		schemeName: '超鬼王_低星',
-		list: [0, 1, 2, 3, 403, 24],
 	}
 	// , {
 	// 	id: 102,

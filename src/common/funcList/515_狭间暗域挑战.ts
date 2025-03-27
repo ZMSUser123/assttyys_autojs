@@ -91,6 +91,7 @@ export class Func515 implements IFuncOrigin {
 			name: '检测_怪物挑战页弹窗_前进',
 			operator: [thisOperator[0]]
 		})) {
+			sleep(thisScript.global.narrow_time);	// 点击前往后，等待时间，以免卡游戏窗口bug
 			return true;
 		}
 
@@ -126,6 +127,7 @@ export class Func515 implements IFuncOrigin {
 
 			if (currentState) {
 				thisScript.global.narrow_state[currentState] = true;
+				return false;
 			}
 
 			return true;

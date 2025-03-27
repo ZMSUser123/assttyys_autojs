@@ -2342,6 +2342,18 @@ const multiFindColors: IMultiFindColorsOrigin = {
 				[center, 741, 223, 0x49a4ed],
 				[center, 735, 219, 0xffffff],
 			]
+		], [
+			1280, 720,
+			[// 新取色,腐血
+				[center, 603, 125, 0xffffff],
+				[center, 615, 126, 0xffffff],
+				[center, 616, 133, 0xffffff],
+				[center, 602, 136, 0xebf5ff],
+				[center, 596, 134, 0xf1ffff],
+				[center, 610, 134, 0x013c6f],
+				[center, 617, 130, 0x021b3c],
+				[center, 600, 129, 0x001f49],
+			]
 		], [ // 星爆图标_正常取色
 			1280, 720,
 			[
@@ -2354,6 +2366,19 @@ const multiFindColors: IMultiFindColorsOrigin = {
 				[center, 740, 217, 0x296db9],
 				[center, 735, 208, 0xfaeee0],
 			]
+		], [
+			1280, 720,
+			[// 新取色,星爆图标_正常取色
+				[right, 996, 70, 0x000b1f],
+				[right, 1005, 71, 0x113a71],
+				[right, 996, 81, 0x012b5f],
+				[right, 1007, 82, 0xffffff],
+				[right, 996, 88, 0x00337a],
+				[right, 1005, 89, 0x1d5fb0],
+				[right, 996, 94, 0x2f72bc],
+				[right, 1012, 88, 0x001f49],
+				[right, 1015, 91, 0x002451],
+			]
 		], [// 星爆图标_下半部分取色
 			1280, 720,
 			[
@@ -2365,6 +2390,18 @@ const multiFindColors: IMultiFindColorsOrigin = {
 				[center, 618, 234, 0x00204e],
 				[center, 608, 232, 0xffffff],
 				[center, 601, 237, 0x619edf],
+			]
+		], [
+			1280, 720,
+			[// 新取色,星爆图标_下半部分取色
+				[right, 995, 87, 0x001c4a],
+				[right, 1005, 86, 0x4181ce],
+				[right, 1009, 87, 0x003473],
+				[right, 1018, 88, 0x001e46],
+				[right, 1012, 92, 0x002452],
+				[right, 1005, 92, 0x004594],
+				[right, 997, 94, 0x5990cb],
+				[right, 1007, 87, 0xf7ffff],
 			]
 		]],
 		similar: 95,
@@ -2551,6 +2588,85 @@ const multiFindColors: IMultiFindColorsOrigin = {
 				[center, 752, 366, 0x968787],
 			]
 		]]
+	},
+	'寻香行头像': {
+		region: [center, 1280, 720, 668, 588, 1177, 717],
+		desc: [[
+			1280, 720,
+			[
+				[center, 908, 643, 0xd9dfdf],
+				[center, 920, 664, 0xf1f1f1],
+				[center, 940, 647, 0x707373],
+				[center, 907, 682, 0xc8ced9],
+				[center, 920, 686, 0x734040],
+				[center, 947, 690, 0xccdada],
+				[center, 940, 676, 0x5b413a],
+			]
+		]]
+	},
+	'寻香行三层': {
+		region: [left, 1280, 720, 0, 0, 1280, 720],
+		desc: [[
+			1280, 720,
+			[
+				[center, 591, 165, 0xffdede],
+				[center, 600, 165, 0x960000],
+				[center, 602, 156, 0xffffff],
+				[center, 595, 148, 0xffffff],
+				[center, 590, 143, 0x190000],
+				[center, 607, 152, 0xffffff],
+				[center, 615, 147, 0x1f0101],
+				[center, 612, 170, 0x550101],
+			]
+		]]
+	},
+	'寻香行五层': {
+		region: [left, 1280, 720, 0, 0, 1280, 720],
+		desc: [[
+			1280, 720,
+			[
+				[center, 833, 189, 0x490000],
+				[center, 839, 187, 0x470000],
+				[center, 847, 184, 0xfefefe],
+				[center, 848, 178, 0xf3e8d5],
+				[center, 851, 178, 0xc9c9bb],
+				[center, 852, 171, 0xc9bdb3],
+				[center, 847, 171, 0xd7c8ab],
+				[center, 836, 170, 0xffffff],
+				[center, 828, 169, 0x1e0000],
+			]
+		]]
+	},
+	'道馆集结': { // 地图里面的集结
+		region: [left, 1280, 720, 0, 0, 1280, 720],
+		desc: [[
+			1280, 720,
+			[
+				[center, 762, 441, 0xe8ba8b],
+				[center, 769, 459, 0xe4b388],
+				[center, 747, 457, 0xffffba],
+				[center, 753, 472, 0xffe88b],
+				[center, 767, 484, 0xe9d94d],
+				[center, 776, 493, 0xe9dd51],
+				[center, 780, 480, 0xffda6d],
+				[center, 773, 472, 0xe1b17b],
+				[center, 805, 415, 0x8b3f16],
+				[center, 804, 427, 0xae6c3b],
+			]
+		], [
+			1280, 720,
+			[
+				[center, 746, 457, 0xffffb6],
+				[center, 756, 465, 0xf4e89a],
+				[center, 762, 477, 0xffff6d],
+				[center, 769, 486, 0xfbf457],
+				[center, 783, 495, 0xffe85c],
+				[center, 760, 484, 0xe1af7f],
+				[center, 770, 460, 0xe4b388],
+				[center, 743, 474, 0xf4ed98],
+			]
+		]],
+		similar: 90,
 	}
 }
 export default multiFindColors;

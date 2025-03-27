@@ -67,12 +67,14 @@ export class Func993 implements IFuncOrigin {
 					[center, 630, 601, 0xfdfdfd],
 					[center, 590, 611, 0xffffff],
 					[center, 588, 592, 0xfefdfd],
-					// 右上角用户协议与隐私政策
-					[right, 1163, 29, 0xbdb39c],
-					[right, 1135, 25, 0xbdb39c],
-					[right, 1261, 27, 0xbaaf98],
-					[right, 1096, 25, 0x928168],
-				],
+					// 左下角适龄提示
+					// [left, 40, 574, 0x67c13a],
+					// [left, 55, 603, 0x67c13a],
+					// [left, 65, 574, 0xffffff],
+					// 左上角阴阳师毛笔字
+					[left, 86, 53, 0xfdfddb],
+					[left, 88, 182, 0xfbdfae],
+				]
 			],
 			oper: [
 				[center, 1280, 720, 562, 574, 722, 617, 1200], // 点击开始游戏

@@ -109,7 +109,6 @@ export class Func000 implements IFuncOrigin {
 	}];
 	operatorFunc(thisScript: Script, _thisOperator): boolean {
 		const thisconf = thisScript.scheme.config['0'];
-
 		// 长时间未执行任何功能后停止脚本
 		if (thisconf.jspd_enabled_longtime_nodo) {
 			const now = new Date();

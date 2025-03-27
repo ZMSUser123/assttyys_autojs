@@ -70,7 +70,7 @@ export class Func017 implements IFuncOrigin {
 		oper: [
 			[center, 1280, 720, 90, 270, 1252, 528, 500]
 		]
-	}, { // 3
+	}, { // 3 邀请好友点击+号
 		desc: [1280, 720,
 			[
 				[center, 170, 600, 0xfff2ce],
@@ -83,7 +83,7 @@ export class Func017 implements IFuncOrigin {
 		oper: [
 			[center, 1280, 720, 152, 578, 190, 623, 1500]
 		]
-	}, { // 4
+	}, { // 4 邀请好友
 		desc: [1280, 720,
 			[
 				[center, 170, 600, 0xc3b99e],
@@ -98,7 +98,6 @@ export class Func017 implements IFuncOrigin {
 		oper: [
 			[center, 1280, 720, 468, 233, 624, 550, 500],
 			[center, 1280, 720, 731, 229, 890, 563, 500],
-			[center, 1280, 720, 516, 632, 749, 700, 1000],
 		]
 	}, { // 5
 		desc: [1280, 720,
@@ -159,7 +158,6 @@ export class Func017 implements IFuncOrigin {
 				oper: [thisOperator[4].oper[random(0, 1)]]
 			}]
 		})) {
-			thisScript.regionClick([thisOperator[4].oper[2]]);
 			thisScript.keepScreen(false);
 		}
 		if (thisScript.oper({
